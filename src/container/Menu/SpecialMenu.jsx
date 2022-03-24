@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import './SpecialMenu.css'
 import { SubHeading } from "../../components"
 import Categories from '../../components/MenuItems/Categories'
@@ -15,14 +15,12 @@ const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 const SpecialMenu = () =>{
 const [menuItems, setMenuItems] = useState(items);
 const [categories, setCategories] = useState([...allCategories]);
-const [inputText, setInputText] = useState('')
 const [query, setQuery] = useState('')
-const [filtered, setFiltered] = useState([])
 
 let inputHandler = (value) =>{
   setQuery(value)
-  query(value)
 };
+
 
 const filterItems = (category) => {
   if(category === 'all') {
@@ -32,10 +30,9 @@ const filterItems = (category) => {
   const newItems = items.filter((item) => item.category === category);
   setMenuItems(newItems);
 };
-const newDrinks = data.drinks.filter((drink)=>{if(drink.title.includes(inputText)){
- // setFiltered(newDrinks)
-  return drink
-}})
+const newDrinks = data.drinks.filter((drink)=>drink.title.toLowerCase().includes(query.toLowerCase())
+
+);
 
 console.log(newDrinks)
 return( 
@@ -54,14 +51,9 @@ return(
    value={query}
    onChange={(e)=>inputHandler(e.target.value)}/>
    </div>
-   
-
-      {newDrinks.map((drink, id) =>{
-       <Drinks query={query} search={(value)=>drink} />
-})}
-  
-   
     
+   <Drinks newDrinks={newDrinks} query={query}/>
+       
     <Categories categories={categories}  filterItems={filterItems}/>
     <Menu items={menuItems}/>
   </div>

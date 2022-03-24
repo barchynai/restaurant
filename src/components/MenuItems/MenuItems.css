@@ -90,6 +90,13 @@
     flex: 1;
   }
 
+  .app__drinks-dash{
+    width: 90px;
+    height: 1px;
+    background: var(--color-golden);
+    margin: 0 1rem;
+  }
+
   .app__drinks-price{
     display: flex;
     justify-content: flex-end;

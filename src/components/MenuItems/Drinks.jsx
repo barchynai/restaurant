@@ -4,14 +4,13 @@ import { data } from '../../constants'
 import './MenuItems.css'
 
 
-const Drinks = ({ title, price, tags, query}) => {
-
-  const filteredData = data.drinks.filter((el) => {
-    if (title.query === '') {
-      return el;
+const Drinks = ({newDrinks, query}) => {
+  const filteredData = newDrinks.map((el) => {
+    if (query === '') {
+      return '';
     }
     else {
-      return el.title.toLowerCase().includes(title.query)
+      return el
     }
   })
   return (
@@ -20,21 +19,21 @@ const Drinks = ({ title, price, tags, query}) => {
         <div className='app__drinks-head'>
           <div className='app__drinks-name'>
           {filteredData.map((item) =>(
-            <p className='p__cormorant drinks_p' style={{ color: "#DCCA87" }} key={item.drinks.id}>{item.drinks.title}</p>
+           <p className='p__cormorant drinks_p' style={{ color: "#DCCA87" }} key={item.id}>{item.title}</p> 
         ))}
           </div>
-
+        
 
           <div className='app__drinks-price'>
           {filteredData.map((item) =>(
-            <p className='p__cormorant' key={item.drinks.id}>{item.drinks.price}</p>
+            <p className='p__cormorant' key={item.id}>{item.price}</p>
         ))}
           </div>
         </div>
 
         <div className='app__drinks-tag'>
         {filteredData.map((item) =>(
-            <p className='p__opensans' style={{ color: "#AAAAAA" }} key={item.drinks.id}>{item.drinks.tags}</p>
+            <p className='p__opensans' style={{ color: "#AAAAAA" }} key={item.id}>{item.tags}</p>
         ))}
         </div>
       </div>
