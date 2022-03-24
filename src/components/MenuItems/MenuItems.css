@@ -1,0 +1,108 @@
+
+.menu-item {
+    display: grid;
+    gap: 1rem 2rem;
+    max-width: 25rem;
+  }
+  .photo {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border: 0.25rem solid var(--color-golden);
+    border-radius: 0.25rem;
+    display: block;
+    margin: 10px;
+  }
+  .section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 3rem 2rem;
+    justify-items: center;
+  }
+
+  .item-info header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px dotted var(--color-grey);
+    font-family: var(--font-base);
+    letter-spacing: 0.04em;
+  text-transform: capitalize;
+  font-size: 23px;
+  }
+  .item-info h4 {
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
+  }
+  .price {
+    color: var(--color-golden);
+  }
+  .item-text {
+    margin-bottom: 0;
+    padding-top: 1rem;
+    color: var(--color-white);
+    font-family: var(--font-alt)
+  }
+
+  .btn-container {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .filter-btn {
+    background: transparent;
+    border-color: transparent;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin: 10px;
+    letter-spacing: 1px;
+    padding: 0.375rem 0.75rem;
+    color: var(--color-golden);
+    cursor: pointer;
+    transition: all 0.3s linear;;
+    border-radius: 0.25rem;;
+  }
+  .filter-btn:hover {
+    background: var(--color-golden);
+    color: var(--color-white);
+  }
+
+  .drinks_main{
+    width: 40%;
+    margin: 1rem 0;
+
+
+  }
+
+  .app__drinks-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .app__drinks-tag{
+    width: 100%;
+    margin-top: 0.2rem;
+  }
+
+  .app__drinks-name{
+    flex: 1;
+  }
+
+  .app__drinks-price{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .btn-add_to_cart{
+    margin: 10px;
+    padding: 6px;
+    background-color: green;
+    border-radius: 8px;
+    color: var(--color-white);
+  }
+  .drinks_p{
+    color: var(--color-white)
+  }
