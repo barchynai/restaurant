@@ -1,7 +1,7 @@
 import React from 'react'
 import './MenuItems.css'
 
-const Menu = ({ items }) => {
+const Menu = ({ items, addItem}) => {
   return (
     <div className='section-center'>
 
@@ -15,7 +15,7 @@ const Menu = ({ items }) => {
               <h4 className='price'>${price}</h4>
             </header>
             <p className='item-text'>{desc}</p>
-            <button type='button' className="btn-add_to_cart">Add to cart</button>
+            <button type='button' onClick={() =>addItem(menuItem)} className="btn-add_to_cart">Add to cart</button>
           </div>
         </div>)
       })}

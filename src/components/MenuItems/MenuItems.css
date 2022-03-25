@@ -53,7 +53,7 @@
   
   .filter-btn {
     background: transparent;
-    border-color: transparent;
+    border: 0.2px var(--color-golden) solid;
     font-size: 1rem;
     text-transform: capitalize;
     margin: 10px;
@@ -71,7 +71,7 @@
 
   .drinks_main{
     width: 40%;
-    margin: 1rem 0;
+    margin: 1rem auto;
 
 
   }
@@ -105,11 +105,35 @@
 
   .btn-add_to_cart{
     margin: 10px;
-    padding: 6px;
-    background-color: green;
+    background-color: rgb(11, 117, 11);
     border-radius: 8px;
     color: var(--color-white);
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
   .drinks_p{
     color: var(--color-white)
+  }
+
+  .basket-btn{
+    border: 1px var(--color-grey) solid;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+  }
+  .basket-icon{
+    height: 2rem;
+    width: 2rem;
+    color: white;
+  }
+  .total-sum{
+    color: var(--color-golden);
+    margin-left: 20px;
+    vertical-align: center;
+    font-size: 30px;
   }

@@ -14,8 +14,8 @@ const Drinks = ({newDrinks, query}) => {
     }
   })
   return (
-    <div className='drinks_main'>
-      <div className='app__drink-oneitem'>
+    <div className='drinks_main' >
+      
         <div className='app__drinks-head'>
           <div className='app__drinks-name'>
           {filteredData.map((item) =>(
@@ -36,7 +36,7 @@ const Drinks = ({newDrinks, query}) => {
             <p className='p__opensans' style={{ color: "#AAAAAA" }} key={item.id}>{item.tags}</p>
         ))}
         </div>
-      </div>
+      
     </div>
   )
 }

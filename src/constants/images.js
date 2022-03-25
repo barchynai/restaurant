@@ -21,6 +21,8 @@ import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import chairman from '../assets/logo-the-chairman.png'
 import chefsign from '../assets/sign1.png'
+import C from '../assets/C.png'
+import steak from '../assets/steak.jpg'
 
 
 export default {
@@ -28,6 +30,7 @@ export default {
   chairman,
   bg,
   chef,
+  C,
   G,
   gallery01,
   gallery02,
@@ -47,4 +50,5 @@ export default {
   award05,
   sign,
   quote,
+  steak,
 };
